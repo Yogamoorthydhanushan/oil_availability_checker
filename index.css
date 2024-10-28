@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("pexel02.jpg.webp");
+    padding: 100px;
+    
+}
+
+header {
+    width: 100%;
+    display:flexbox;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 40px;
+    background-image: url("pexels01.jpg");
+    border-bottom: 1px solid #ccc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    backdrop-filter: blur(100px);
+}
+
+.logo span {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.login a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+
+nav ul  a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #d36e20c6;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #0f0e0e;
+    transition: background-color 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+nav ul a:hover {
+    background-color: #aba0a0;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button{ 
+    padding: 8px 25px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-size: 12px;
+background-color: #fa7108fe;
+
+}
+button a:hover {
+    background-color: #aba0a0;
+
+}
+.marquee {
+    background-image: url("pexels01.jpg.webp");
+    color: #0e0e0e;
+    padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1cm;
+    border-radius: 30px;
+    backdrop-filter: blur(50px);
+    text-shadow: #0f0e0e;
+    border: 2px solid #ffffff;
+    
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+

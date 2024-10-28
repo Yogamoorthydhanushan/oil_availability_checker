@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Availability Checker</title>
+    <link rel="stylesheet" href="check.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Oil Availability Checker</h1>
+        <form action="show_availability.php" method="post">
+        <div class="input-group">
+            <label for="location">Enter Location:</label>
+            <select name="location" id="location">
+                <option value="colombo">colombo</option>
+                <option value="nuweraeliya">nuweraeliya</option>
+                <option value="kandy">kandy</option>
+                <option value="badhulla">badhulla</option>
+                <option value="gampaha">gampaha</option>
+                <option value="jaffna">jaffna</option>
+                <option value="galle">galle</option>
+                <option value="matara">matara</option>
+                <option value="polannaruwa">polannaruwa</option>
+                <option value="anuradhapura">anuradhapura</option>
+                <option value="batticalo">batticalo</option>
+                <option value="mannar">mannar</option>
+                <option value="vavuniya">vavuniya</option>
+                <option value="matale">matale</option>
+                <option value="kaluthara">kaluthara</option>
+                <option value="trinco">trinco</option>
+                <option value="ratnapura">ratnapura</option>
+                <option value="mullai theevu">mullai theevu</option>
+                <option value="monaragala">monaragala</option>
+                <option value="kilinichi">kilinochi</option>
+
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="oil-type">Select Oil Type:</label>
+            <select name="oil_type" id="oil-type">
+                <option value="crude">Crude Oil</option>
+                <option value="diesel">Diesel</option>
+                <option value="petrol">Petrol</option>
+            </select>
+        </div>
+
+        <button onclick="checkAvailability()" class="btn">Check Availability</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>

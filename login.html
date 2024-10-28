@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Login</title>
+    
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'YOUR_FACEBOOK_APP_ID', // Replace with your Facebook App ID
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v13.0' // Latest SDK version
+        });
+      };
+    </script>
+
+    <!-- Google Platform Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="home.html" method="POST">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="username" required>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="password" required>
+                    <i class='bx bx-lock'></i>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </form>
+            <p class="or">
+                ------OR------
+            </p>
+            <div class="social">
+                <div class="go" id="googleSignInBtn"><i class='bx bxl-google-plus-circle'></i> Google</div>
+                <div class="fb" id="fbLoginBtn"><i class='bx bxl-facebook-square'></i> Facebook</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facebook Login Script -->
+    <script>
+      document.getElementById('fbLoginBtn').addEventListener('click', function() {
+        FB.login(function(response) {
+          if (response.status === 'connected') {
+            FB.api('/me', {fields: 'name,email'}, function(response) {
+              alert('Welcome, ' + response.name);
+              // You can redirect the user or use the data as needed
+            });
+          } else {
+            alert('Facebook login failed!');
+          }
+        }, {scope: 'public_profile,email'});
+      });
+    </script>
+
+    <!-- Google Login Script -->
+    <script>
+      function handleCredentialResponse(response) {
+        const data = jwt_decode(response.credential); // You may need to include jwt-decode library
+        alert('Welcome, ' + data.name);
+        // You can send data to your server for further processing
+      }
+
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id: 'YOUR_GOOGLE_CLIENT_ID', // Replace with your Google Client ID
+          callback: handleCredentialResponse
+        });
+
+        google.accounts.id.renderButton(
+          document.getElementById('googleSignInBtn'),
+          
+            // Customize the button as needed
+        );
+      };
+    </script>
+    
+
+</body>
+</html>

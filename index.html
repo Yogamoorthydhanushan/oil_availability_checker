@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Availability Checker</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to your custom CSS -->
+    <style>
+        /* Basic Reset */
+        :root {
+    --primary-color: #007bff; /* Base blue */
+    --primary-color-light: #339dff; /* Lighter shade of blue */
+    --primary-color-dark: #0056b3; /* Darker shade of blue */
+    --background-light: #f9fafb; /* Light background */
+    --text-color: #333; /* Primary text color */
+    --text-color-light: #666; /* Secondary text color */
+    --header-bg: #007bff; /* Header background color */
+    --footer-bg: #333; /* Footer background color */
+    --footer-text-color: #ddd; /* Footer text color */
+    --button-bg: #fff; /* Button background color */
+    --button-hover-bg: #e0e0e0; /* Button hover background color */
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--header-bg);
+    color: rgb(240, 108, 0);
+    background-image: url("pexels01.jpg.webp");
+}
+
+.logo span {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--button-bg);
+}
+
+nav a {
+    color: var(--button-bg);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color-light);
+}
+
+.login button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.2s;
+}
+
+.login button:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--primary-color-dark);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-bg);
+    width: 100%;
+    background-image: url("pexels01.jpg.webp");
+    border-radius: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--button-bg);
+    color: var(--primary-color);
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+}
+
+.hero a:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px;
+    background-color: var(--button-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: var(--text-color-light);
+    line-height: 1.6;
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo"> 
+            <span>Oil Availability Checker</span>
+        </div>
+        
+        <div class="login">
+            <button><a href="login.html" style="text-decoration: none; color: inherit;">Login</a></button>
+        </div>
+    </header>
+    <br>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Oil Availability Checker</h1>
+        <p>Discover the most reliable platform for checking the availability of crude oil, diesel, and petrol across various locations. Stay updated and make informed choices with real-time data.</p>
+        
+    </section>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="card">
+            <h2>Check Availability</h2>
+            <p>Find out where oil is available in your area and monitor stock levels with ease.</p>
+        </div>
+        <div class="card">
+            <h2>Real-Time Data</h2>
+            <p>Stay updated with real-time stock levels of different oil types across locations.</p>
+        </div>
+        <div class="card">
+            <h2>Learn More</h2>
+            <p>Gain insights into oil types and quality available in your location for better decision-making.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 Oil Availability Checker. All rights reserved. | <a href="contact.html">Contact Us</a>
+    </footer>
+</body>
+</html>
