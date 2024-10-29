@@ -12,8 +12,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$location = $_GET['location'];
-$oilType = $_GET['oil_type'];
+$location = $_POST['location'];
+$oilType = $_POST['oil_type'];
 
 $sql = "SELECT availability FROM oil_stock WHERE location = ? AND oil_type = ?";
 $stmt = $conn->prepare($sql);
